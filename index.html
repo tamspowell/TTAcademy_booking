@@ -43,7 +43,7 @@
 
   .tb-booking .tb-steps {
     list-style: none; margin: 28px 0 32px; padding: 0;
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;
   }
   .tb-booking .tb-steps li {
     background: var(--tb-bg); border: 1px solid var(--tb-line); border-radius: 14px;
@@ -56,6 +56,16 @@
   }
   .tb-booking .tb-steps strong { font-family: "Rum Raisin", cursive; font-weight: 400; font-size: 18px; display: block; margin-bottom: 2px; }
   .tb-booking .tb-steps span.tb-txt { font-size: 14px; color: var(--tb-muted); }
+  .tb-booking .tb-steps li.tb-focus { background: var(--tb-red-soft); border-color: #f2c4c8; }
+  .tb-booking .tb-steps li.tb-focus span.tb-txt { color: var(--tb-ink); }
+  .tb-booking .tb-req {
+    display: inline-block; margin-left: 6px; vertical-align: 2px; font-size: 11px; font-weight: 700;
+    letter-spacing: .05em; text-transform: uppercase; color: #fff; background: var(--tb-red);
+    padding: 2px 8px; border-radius: 999px;
+  }
+  @media (max-width: 860px) {
+    .tb-booking .tb-steps { grid-template-columns: repeat(2, 1fr); }
+  }
 
   .tb-booking .tb-calendar {
     background: var(--tb-bg); border: 1px solid var(--tb-line); border-radius: 16px;
@@ -96,7 +106,8 @@
   <ol class="tb-steps">
     <li><span class="tb-num">1</span><strong>Pick a day</strong><span class="tb-txt">Open days show available times.</span></li>
     <li><span class="tb-num">2</span><strong>Choose a time</strong><span class="tb-txt">Tap a time slot and add your name and email.</span></li>
-    <li><span class="tb-num">3</span><strong>You're booked</strong><span class="tb-txt">A confirmation email arrives with the details.</span></li>
+    <li class="tb-focus"><span class="tb-num">3</span><span class="tb-req">Required</span><strong>Add your focus topic</strong><span class="tb-txt">Tell me what you’d like to work on so I can prepare your lesson in advance.</span></li>
+    <li><span class="tb-num">4</span><strong>You're booked</strong><span class="tb-txt">A confirmation email arrives with the details.</span></li>
   </ol>
 
   <div class="tb-calendar">
